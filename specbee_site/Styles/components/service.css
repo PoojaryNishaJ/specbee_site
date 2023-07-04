@@ -1,0 +1,109 @@
+.services {
+  background-color: #0020f6;
+}
+.services__section--items {
+  background-image: url("https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon.svg");
+  background-repeat: no-repeat;
+  height: 15rem;
+  width: 15rem;
+  background-position-x: 50%;
+  background-position-y: center;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.services__section--items img {
+  width: 6rem;
+}
+.services__heading {
+  margin-top: 0;
+  font-size: 5rem;
+  padding: 5rem;
+  color: white;
+  margin-left: 5rem;
+}
+.services__heading ::before {
+  background-color: #e3f307;
+  content: "";
+  height: 0.625rem;
+  margin-bottom: 15.5rem;
+  margin-top: 4.5rem;
+  position: absolute;
+  left: 0rem;
+  top: 97px;
+  width: 6.625rem;
+}
+.services__wrapper {
+  max-width: 73rem;
+  padding-top: 50px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.services__section--cards {
+  width: 25%;
+  text-align: center;
+  color: white;
+}
+.services-text__wrapper {
+  padding: 1rem;
+}
+.services-text__wrapper h2 {
+  font-size: 1.4rem;
+}
+.services__wrapper p {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .services__heading {
+    font-size: 3rem;
+    padding: 3rem;
+    margin-left: 2rem;
+  }
+  .services__section--cards {
+    width: 47%;
+  }
+  .services__heading ::before {
+    background-color: #e3f307;
+    content: "";
+    height: 0.625rem;
+    margin-bottom: 15.5rem;
+    margin-top: 4.5rem;
+    position: absolute;
+    left: 0rem;
+    top: 25px;
+    width: 3.625rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .services__heading {
+    font-size: 1.8rem;
+    padding: 1rem;
+    margin-left: 1rem;
+  }
+  .services__heading ::before {
+    display: none;
+  }
+  .services__section--cards {
+    width: 100%;
+  }
+  .services__section--items {
+    background-image: url("https://www.specbee.com/themes/custom/specbee/assets/media/icons/polygon.svg");
+    background-repeat: no-repeat;
+    height: 12rem;
+    width: 12rem;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .services__section--items img {
+    width: 5rem;
+  }
+}/*# sourceMappingURL=service.css.map */

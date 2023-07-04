@@ -1,0 +1,229 @@
+@use './abstracts/colors' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.insights {
+    &__wrapper {
+        background-color: $secondary-blue;
+        padding: 1rem;
+    }
+    &__heading{
+
+        color: white;
+
+        &--main {
+
+            padding: 1rem 1rem 1rem 3rem;
+            font-size: 32px;
+            font-weight: 400;
+
+            ::before {
+                background-color: $secondary-yellow;
+                content: "";
+                height: 0.625rem;
+                margin-bottom: 15.5rem;
+                margin-top: 1.5rem;
+                position: absolute;
+                width: 7.625rem;
+                left: -5rem;
+            }
+        }
+
+        &--desc {
+            margin-bottom: 48px;
+            font-size: 18px;
+            line-height: 24px;
+            word-spacing: 7px;
+        }
+    }
+
+    &__card  {
+
+        &--image {
+            img {
+                height: auto;
+                width: 100%;
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: scale(0.75);
+                }
+            }
+
+        }
+        &--desc {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        &--item {
+            padding: 1px;
+            background-color: white;
+            margin-bottom: 18px;
+        }
+        &--title{
+
+            position: absolute;
+            top: 13px;
+            left: 19px;
+
+            h2 {
+                color: $secondary-blue;
+                font-size: 1rem;
+                font-weight: 800;
+                gap: 0.5rem;
+                width: 81%;
+                line-height: 1.25;
+                margin-bottom: 0.75rem;
+                text-transform: uppercase;
+            }
+            ::after {
+                background-color: $secondary-yellow;
+                content: "";
+                display: block;
+                flex: 1 0 4.375rem;
+                height: 0.25rem;
+                width: 4.375rem;
+                row-gap: 10px;
+                position: absolute;
+                right: 0;
+                top: 8px;
+            }
+        }
+
+        &--contents {
+            padding: 5.25rem 0 1.25rem 1.25rem;
+            position: relative;
+        }
+
+    }
+}
+@media (min-width: 768px) {
+    /* CSS rules for tablets with a minimum width of 768 pixels */
+    .insights {
+        &__heading {
+
+            &--desc {
+                padding-left: 52px;
+            }
+        }
+
+        &__card {
+
+            &--image {
+                img {
+                    height: auto;
+                    width: 100%;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(0.75);
+                    }
+                }
+
+            }
+
+            &--title {
+                position: absolute;
+                top: 13px;
+                left: 0px;
+                right: 0px;
+                width: 100%;
+
+                h2 {
+                    color: $secondary-blue;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    gap: 0.5rem;
+                    width: 81%;
+                    padding: 24px 24px;
+                    line-height: 1.25;
+                    margin-bottom: 0.75rem;
+                    text-transform: uppercase;
+                }
+                ::after {
+                    background-color: $secondary-yellow;
+                    content: "";
+                    display: block;
+                    flex: 1 0 4.375rem;
+                    height: 0.25rem;
+                    width: 4.375rem;
+                    row-gap: 10px;
+                    position: absolute;
+                    right: 0;
+                    top: 31px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1025px) {
+    /* CSS rules for laptops */
+    .insights {
+
+        &__heading {
+
+        &--main {
+            font-size: 4.0625rem;
+            padding: 5rem 4rem 2rem 5rem;
+            color: white;
+            margin-left: 5rem;
+            position: relative;
+
+            ::before {
+                background-color: $secondary-yellow;
+                content: "";
+                height: 0.625rem;
+                margin-bottom: 15.5rem;
+                margin-top: 1.5rem;
+                position: absolute;
+                width: 7.625rem;
+                left: -6rem;
+                top: 6.5rem;
+            }
+        }
+
+        &--desc {
+            padding: 0rem 1rem 3rem 2rem;
+            color: white;
+            margin-left: 8rem;
+            width: 640px;
+
+        }
+        }
+        &__card {
+
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0px 100px 10px 156px;
+            column-gap: 18px;
+
+            &--image {
+                overflow: hidden;
+                img {
+                    width: 371px;
+                    transition: transform 0.3s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+            }
+            &--item {
+                width: 370px;
+            }
+            &--title {
+                h2 {
+                    width: 256px;
+                    padding: 6px 18px;
+                }
+                ::after {
+                    top: 15px;
+                }
+            }
+        }
+    }
+}

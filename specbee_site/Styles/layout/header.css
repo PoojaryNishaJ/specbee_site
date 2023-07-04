@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 2.5rem;
+}
+p:last-child {
+  margin-bottom: 0rem;
+}
+
+.container {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background-color: rgba(0, 32, 246, 0.8);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  position: fixed;
+  z-index: 1;
+}
+.header__left {
+  display: flex;
+}
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  z-index: -1;
+  background-color: #0020f6;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+.header__nav a {
+  display: flex;
+  text-align: center;
+  padding: 1rem 1rem 1rem 3rem;
+  font-size: 32px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.header-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.header-container____container {
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+}
+.header-container--button {
+  height: 35px;
+  width: 110px;
+  background-color: #e3f307;
+  border: 1px solid #e3f307;
+  border-radius: 5px;
+  color: #0020f6;
+  margin-right: 20px;
+}
+.header-container--button :hover {
+  height: 35px;
+  width: 110px;
+  background-color: #0020f6;
+  border: 1px solid #e3f307;
+  border-radius: 5px;
+  color: #e3f307;
+}
+
+.hamburger {
+  display: block;
+  width: 34px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar, .hamburger::after, .hamburger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.header__nav.is-active {
+  left: 0;
+  display: block;
+}
+
+@media only screen and (max-width: 480px) {
+  .header-container--button {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

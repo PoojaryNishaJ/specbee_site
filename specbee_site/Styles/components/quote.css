@@ -1,0 +1,65 @@
+.quote__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 5rem;
+}
+.quote__author--wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rem;
+}
+.quote-info {
+  margin: 30px;
+}
+.quote-info p {
+  margin-left: 8rem;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .quote__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 5rem;
+  }
+  .quote__author--wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+  }
+  .quote-info {
+    margin: 30px;
+  }
+  .quote-info p {
+    margin-left: 8rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .quote__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 1rem;
+  }
+  .quote__author--wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  .quote-info {
+    margin: 3px;
+  }
+  .quote-info p {
+    margin-left: 1rem;
+    font-size: 2rem;
+  }
+  .quote-icon svg {
+    width: 80px;
+  }
+}/*# sourceMappingURL=quote.css.map */

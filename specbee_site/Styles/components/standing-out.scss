@@ -1,0 +1,68 @@
+.standing-out {
+    &__heading {
+        color: blue;
+        margin-top: 0;
+        margin-left: 66px;
+        font-size: 5rem;
+        padding: 5rem;
+        position: relative;
+
+        h2 {
+            ::before {
+                background-color: #e3f307;
+                content: "";
+                height: 0.625rem;
+                margin-bottom: 15.5rem;
+                margin-top: 4.5rem;
+                position: absolute;
+                width: 6.625rem;
+                left: -5rem;
+            }
+        }
+    }
+    &__containers {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        margin-left: 10.5rem;
+        margin-right: 10.5rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+    &__section {
+        width: 30%;
+    }
+    &__text {
+        padding: 1rem;
+        background-color: #f5f5f5;
+        position: relative;
+    }
+    &__desc {
+        height: 50px;
+        overflow: hidden;
+    }
+    &__title {
+        h2 {
+            font-size: 1.1rem;
+            padding-bottom: 0.5rem;
+            color: #001186;
+
+            ::after {
+                content: "";
+                background-color: #0020f6;
+                height: 0.3rem;
+                position: absolute;
+                width: 3.625rem;
+                right: 0rem;
+                top: 2.3rem;
+            }
+        }
+    }
+    &__image img {
+        height: auto;
+        max-width: 100%;
+    }
+}

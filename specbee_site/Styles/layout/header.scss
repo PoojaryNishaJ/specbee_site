@@ -1,0 +1,114 @@
+@use '../abstracts/base' as * ;
+@use '../abstracts/colors' as * ;
+
+.header{
+    width: 100%;
+    background-color: rgba(0,32,246,.8);
+    backdrop-filter: blur(0.5rem);
+    position: fixed;
+    z-index: 1;
+
+
+    &__left {
+        display: flex;
+    }
+    &__nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        display: none;
+        z-index: -1;
+        background-color: $secondary-blue;
+        padding-top: 120px;
+        transition: 0.4s;
+
+        a{
+            display: flex;
+            text-align: center;
+            padding: 1rem 1rem 1rem 3rem;
+            font-size: 32px;
+            font-weight: 400;
+            color: $primary-white;
+            text-decoration: none;
+        }
+
+    }
+
+    &-container{
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+
+        &____container{
+            display:flex;
+            margin-right: 30px;
+            align-items: center;
+        }
+
+
+
+        &--button{
+            height: 35px;
+            width:110px;
+            background-color: #e3f307;
+            border: 1px solid #e3f307;
+            border-radius: 5px;
+            color: #0020f6;
+            margin-right: 20px;
+
+            :hover {
+                height: 35px;
+                width:110px;
+                background-color:#0020f6;
+                border: 1px solid #e3f307;
+                border-radius: 5px;
+                color: #e3f307;
+            }
+        }
+
+    }
+}
+.hamburger {
+    display: block;
+    width: 34px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+.hamburger .bar,.hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: $primary-white;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.header__nav.is-active {
+    left: 0;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .header-container--button{
+        display:none;
+    }
+
+    }
